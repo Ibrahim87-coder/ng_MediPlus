@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class DrInfoComponent implements OnInit {
   
   
-  drdata=[];
+  drdata:any=[];
 
   
 
@@ -25,7 +25,6 @@ export class DrInfoComponent implements OnInit {
       this.specialData.push(docs.data())
       console.log(docs.data())
       var data = <any>docs.data()
-      // this.firstname=data.firstName;
       this.drdata=data;
 
 
