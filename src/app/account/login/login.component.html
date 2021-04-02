@@ -1,0 +1,19 @@
+<div id="all">
+    <div class="container" style="width: 85%;margin-top: 10%;">
+        <h1 class="h3 mb-3 fw-normal" style="text-align: center;">Please sign in</h1>
+        <label for="inputEmail" class="visually-hidden">Email address</label>
+        <input [(ngModel)]='email' type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <br>
+        <label for="inputPassword" class="visually-hidden">Password</label>
+        <input [(ngModel)]='pass' type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <br><br>
+        <hr>
+        <button (click)="signin()" class="w-100 btn btn-lg btn-primary" type="button">Sign in</button>
+        <p style="text-align: center;" class="mt-5 mb-3 text-muted">&copy; Mediplus 2020–2021</p>
+    </div>
+
+</div>
+
+<div class="spinner-grow text-primary spinner" id="spinner" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>

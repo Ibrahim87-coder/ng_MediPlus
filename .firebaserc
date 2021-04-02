@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mediplus-lebanon": {
+      "hosting": {
+        "mediplus": [
+          "mediplus-lebanon"
+        ]
+      }
+    }
+  }
+}

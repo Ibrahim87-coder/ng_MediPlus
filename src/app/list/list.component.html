@@ -1,0 +1,222 @@
+<nav class="navbar navbar-expand-lg navbar-light  bg-light  site-navbar-target ftco_navbar">
+    <div class="container">
+        <a class="navbar-brand logo " href="index.html">Mediplus</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav nav ml-auto">
+                <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+                <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+                <li class="nav-item"><a href="#services-section" class="nav-link"><span>services</span></a></li>
+                <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- <section class="ftco-section bg-light" id="blog-section">
+    <div class="container-fluid bg-light ">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-2 pt-3">
+                <div class="form-group ">
+                    <select id="inputState " class="form-control">
+                        <option selected>Brand</option>
+                        <option>BMW</option>
+                        <option>Audi</option>
+                        <option>Maruti</option>
+                        <option>Tesla</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2 pt-3">
+                <div class="form-group">
+                    <select id="inputState" class="form-control">
+                        <option selected>Model</option>
+                        <option>BMW</option>
+                        <option>Audi</option>
+                        <option>Maruti</option>
+                        <option>Tesla</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2 pt-3">
+                <div class="form-group">
+                    <select id="inputState" class="form-control">
+                        <option selected>Budget</option>
+                        <option>BMW</option>
+                        <option>Audi</option>
+                        <option>Maruti</option>
+                        <option>Tesla</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2 pt-3" >
+                <div class="form-group">
+                    <select id="inputState" class="form-control">
+                        <option selected>Type</option>
+                        <option>BMW</option>
+                        <option>Audi</option>
+                        <option>Maruti</option>
+                        <option>Tesla</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <button type="button" (click)="filter()" class="btn btn-primary btn-block">Filter</button>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<div style="margin:20px auto;">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-4" *ngFor="let doctor of doctors" style="margin: 7px 0;">
+                <div class="card" style="width: 19rem;">
+                    <div class="user-avatar" style="width:auto;height: 200px;overflow: hidden;">
+                        <img class="card-img-top" src="{{doctor.image}}" style="width: 400px;height: 300px;margin: -75px 0 0 -100px;" alt="doctor">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{doctor.firstName }}{{doctor.lastName}}</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h4>specialist: {{doctor.specialization}}</h4>
+                        </li>
+                        <li class="list-group-item">
+                            Location:
+                            <h4>{{doctor.city}}</h4>
+                        </li>
+                        <li class="list-group-item">
+                            <h4>Cost: {{doctor.cost}}</h4>
+                        </li>
+                    </ul>
+                    <div class="card-body list1">
+                        <a href="#" class="card-link link">Show more details</a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-4 ">
+                <div class="card" style="width: 19rem;">
+                    <img src="images/drl1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr.jhoni khalil</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h4>specialist:</h4>
+                        </li>
+                        <li class="list-group-item">
+                            <h4>Location</h4>
+                        </li>
+                        <li class="list-group-item">
+                            <h4>Cost:</h4>
+                        </li>
+                    </ul>
+                    <div class="card-body list1">
+                        <a href="#" class="card-link link">Show more details</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="card" style="width: 19rem;">
+                    <img src="images/drl1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr.jhoni khalil</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h4>specialist:</h4>
+                        </li>
+                        <li class="list-group-item">
+                            <h4>Location</h4>
+                        </li>
+                        <li class="list-group-item">
+                            <h4>Cost:</h4>
+                        </li>
+                    </ul>
+                    <div class="card-body list1">
+                        <a href="#" class="card-link link">Show more details</a>
+
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<footer class="ftco-footer ftco-section img" style="background-image: url(images/footer-bg.jpg);">
+    <div class="overlay"></div>
+    <div class="container-fluid px-md-5">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Mediplus</h2>
+                    <p>For medical examination or consult a qualified doctors.</p>
+                    <ul class="ftco-footer-social list-unstyled mt-5">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Links</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                        <li><a href="#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                        <li><a href="#services-section"><span class="icon-long-arrow-right mr-2"></span>Services</a>
+                        </li>
+                        <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Services</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>laboratory Tests</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Qualified Doctors</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>X-ray examination</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>24 Hours Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Have a Questions?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">Al-Hamra Street, Beirut
+                                    12000, Lebanon</span></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+961 71
+                                        112233</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope pr-4"></span><span
+                                        class="text">info@yourdomain.com</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p>
+                    Copyright &copy; 2021</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+    <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+    <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+</svg></div> -->

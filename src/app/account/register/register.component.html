@@ -1,0 +1,126 @@
+<div class="container" id="all">
+    <img src="{{image}}" id="profileImage" alt="profile">
+    <h2 id="title" style="text-align: center;">Sign up</h2>
+
+    <div class="form-check">
+        <input (change)="swiched($event)" class="form-check-input" type="checkbox" value="" id="mycheckbox">
+        <label class="form-check-label" for="flexCheckDefault">
+          I am a doctor
+        </label>
+    </div>
+    <br>
+
+    <div class="form-floating mb-3">
+        <input [(ngModel)]="email" type="email" class="form-control" id="nb-phone" placeholder="you@example.com" required>
+        <label for="email" class="form-label">Email</label>
+    </div>
+
+    <div class="form-floating">
+        <input [(ngModel)]="pass" type="password" class="form-control" id="pass" placeholder="Password" required>
+        <label for="pass" class="form-label">Password</label>
+    </div>
+    <br>
+
+    <div class="row g-2">
+        <div class="col-md">
+            <div class="form-floating">
+                <input [(ngModel)]="firstName" type="text" class="form-control" id="firstName" placeholder="fname" required>
+                <label for="firstName" class="form-label">First name</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-floating">
+                <input [(ngModel)]="lastName" type="text" class="form-control" placeholder="lname" id="lastName" required>
+                <label for="lastName" class="form-label">Last name</label>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row g-2">
+        <div class="col-md">
+            <div class="form-floating">
+                <input [(ngModel)]="username" type="text" class="form-control" id="username" placeholder="Username" required>
+                <label for="username" class="form-label">Username</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-floating">
+                <input class="form-control" id="floatingPassword" name="imageUrl" type="file" accept="image/*" (change)="handleUpload($event)" />
+                <label for="formFileLg" class="form-label">Profile image</label>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="form-floating mb-3">
+        <input [(ngModel)]="number" type="number" class="form-control" id="number" placeholder="Phone number">
+        <label for="number" class="form-label">Phone number</label>
+    </div>
+
+    <div class="form-floating mb-3" id="adress">
+        <input [(ngModel)]="adress" type="text" class="form-control" id="address" placeholder="Adress" required>
+        <label for="address" id="adress-label" class="form-label">Adress</label>
+    </div>
+
+
+    <div class="row g-2" id="profession">
+        <div class="col-md" id="">
+            <div class="form-floating">
+                <input [(ngModel)]="specialization" type="text" class="form-control" id="Specialization" placeholder="Specialization" required>
+                <label for="username" class="form-label">Specialization</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-floating">
+                <input [(ngModel)]="cost" type="text" class="form-control" id="Specialization" placeholder="cost" required>
+                <label for="cost" class="form-label">Cost</label>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="row g-2" id="clinicAdress">
+        <div class="col-md">
+            <div class="form-floating">
+                <input [(ngModel)]="city" type="text" class="form-control" id="Specialization" placeholder="city" required>
+                <label for="city" class="form-label">city</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-floating">
+                <input [(ngModel)]="street" type="text" class="form-control" id="Specialization" placeholder="street" required>
+                <label for="cost" class="form-label">street</label>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row g-2" id="info">
+        <div class="col-md">
+            <div class="form-floating">
+                <input [(ngModel)]="near" type="text" class="form-control" id="near" placeholder="near" required>
+                <label for="near" class="form-label">Near</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-floating">
+                <input placeholder="clinic number" [(ngModel)]="cNumber" type="text" class="form-control" id="cNumber" required>
+                <label for="cNumber" class="form-label">Clinic number</label>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-4">
+
+    <button (click)="submit()" class="w-100 btn btn-primary btn-lg" type="button">Sign up</button>
+</div>
+
+
+<br><br>
+<p style="text-align: center;" class="mb-1">&copy; 2020-2021 Mediplus</p>
+
+
+<div class="spinner-grow text-primary spinner" id="spinner" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
