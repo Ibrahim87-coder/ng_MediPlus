@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light  bg-light  site-navbar-target ftco_navbar">
+<!-- <nav class="navbar navbar-expand-lg navbar-light  bg-light  site-navbar-target ftco_navbar">
     <div class="container">
         <a class="navbar-brand logo " href="index.html">Mediplus</a>
         <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->
 
 <!-- <section class="ftco-section bg-light" id="blog-section">
     <div class="container-fluid bg-light ">
@@ -71,31 +71,35 @@
     </div>
 </section> -->
 
-<div style="margin:20px auto;">
+<div style="margin:20px auto; margin-top: 150px;">
     <div class="container">
         <div class="row d-flex">
             <div class="col-md-4" *ngFor="let doctor of doctors" style="margin: 7px 0;">
-                <div class="card" style="width: 19rem;">
-                    <div class="user-avatar" style="width:auto;height: 200px;overflow: hidden;">
-                        <img class="card-img-top" src="{{doctor.image}}" style="width: 400px;height: 300px;margin: -75px 0 0 -100px;" alt="doctor">
+                <div class="card" style="width: 20rem;">
+                    <div class="user-avatar" style="max-width: 500px; max-height: 400px; object-fit: cover; overflow: hidden;">
+                        <img class="card-img-top" src="{{doctor.image}}" style="width:100%;height: 100%;" alt="doctor">
+                        <!-- margin: -75px 0 0 -100px;" -->
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">{{doctor.firstName }}{{doctor.lastName}}</h5>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <h4>specialist: {{doctor.specialization}}</h4>
+                            <h4>specialist:</h4>
+                            {{doctor.specialization}}
                         </li>
                         <li class="list-group-item">
-                            Location:
-                            <h4>{{doctor.city}}</h4>
+                            
+                            <h4>Location:</h4>
+                            {{doctor.city}}
                         </li>
                         <li class="list-group-item">
-                            <h4>Cost: {{doctor.cost}}</h4>
+                            <h4>Cost: </h4>
+                            {{doctor.cost}}
                         </li>
                     </ul>
                     <div class="card-body list1">
-                        <a href="#" class="card-link link">Show more details</a>
+                        <a routerLink="/info"  class="card-link link">Show more details</a>
 
                     </div>
                 </div>
@@ -149,7 +153,7 @@
         </div>
     </div>
 </div>
-
+<!-- 
 <footer class="ftco-footer ftco-section img" style="background-image: url(images/footer-bg.jpg);">
     <div class="overlay"></div>
     <div class="container-fluid px-md-5">
@@ -213,7 +217,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
 
 <!-- <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
     <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />

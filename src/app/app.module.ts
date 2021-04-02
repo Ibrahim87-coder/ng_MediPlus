@@ -8,12 +8,18 @@ import { environment } from 'src/environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import { ListComponent } from './list/list.component'
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { DrInfoComponent } from './dr-info/dr-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    ListComponent
+    ListComponent,
+    HeaderComponent,
+    FooterComponent,
+    DrInfoComponent
   ],
   imports: [
     BrowserModule,
