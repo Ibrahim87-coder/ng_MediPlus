@@ -1,10 +1,7 @@
-<body>
-  
-   
-    
+
     <!------ Include the above in your HEAD tag ---------->
     
-    <div class="container"  style="margin-top: 110px;">
+    <div class="container"  style="margin-top: 120px;">
        <div class="row">
           <div class="col-xs-12 col-sm-9">
             
@@ -15,13 +12,13 @@
               </div>
               <div class="card-body">
                 <div class="profile__avatar">
-                  <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="...">
+                  <img src="{{drdata.image}}" alt="...">
                 </div>
                 <div class="profile__header">
-                  <h3>Dr.John Smith <small>Primary Care Doctor</small></h3>
-                  <p class="card-text text-muted">
+                  <h2>{{drdata.firstName}} {{drdata.lastName}} <h5>{{drdata.specialization}}</h5></h2>
+                  <!-- <p class="card-text text-muted">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non nostrum odio cum repellat veniam eligendi rem cumque magnam autem delectus qui.
-                  </p>
+                  </p> -->
                 </div>
               </div>
               <!-- icons -->
@@ -64,15 +61,11 @@
                   <tbody>
                     <tr>
                       <th><strong>Location</strong></th>
-                      <td>United States</td>
-                    </tr>
-                    <tr>
-                      <th><strong>Company name</strong></th>
-                      <td>Simpleqode.com</td>
+                      <td>{{drdata.city}} , {{drdata.near}}</td>
                     </tr>
                     <tr>
                       <th><strong>Position</strong></th>
-                      <td>Nurse</td>
+                      <td>{{drdata.specialization}}</td>
                     </tr>
                     <tr>
                       <th><strong>Rating</strong></th>
@@ -90,7 +83,7 @@
             </div>
     
             <!-- Specialities -->
-            <div class="card "style="margin: 10px;">
+            <!-- <div class="card "style="margin: 10px;">
               <div class="card-header">
               <h4>Specialities</h4>
               </div>
@@ -112,10 +105,10 @@
                   </tbody>
                 </table>
               </div>
-            </div>
+            </div> -->
     
             <!-- Degrees -->
-            <div class="card "style="margin: 10px;">
+            <!-- <div class="card "style="margin: 10px;">
               <div class="card-header">
               <h4>Degrees</h4>
               </div>
@@ -129,7 +122,7 @@
                   </tbody>
                 </table>
               </div>
-            </div>
+            </div> -->
             <!-- Latest posts -->
             <div class="card"style="margin: 10px;">
               <div class="card-header">
@@ -215,7 +208,7 @@
                 </div>
                 <div class="profile__contact-info-body">
                   <h5 class="profile__contact-info-heading">Work number</h5>
-                  (000)987-65-43
+                  {{drdata.clinicNumber}}
                 </div>
               </div>
               <div class="profile__contact-info-item">
@@ -224,7 +217,7 @@
                 </div>
                 <div class="profile__contact-info-body">
                   <h5 class="profile__contact-info-heading">Mobile number</h5>
-                  (000)987-65-43
+                  {{drdata.number}}
                 </div>
               </div>
               <div class="profile__contact-info-item">
@@ -233,7 +226,7 @@
                 </div>
                 <div class="profile__contact-info-body">
                   <h5 class="profile__contact-info-heading">E-mail address</h5>
-                  <a href="mailto:admin@domain.com">admin@domain.com</a>
+                  <a href="mailto:admin@domain.com">{{drdata.email}}</a>
                 </div>
               </div>
               <div class="profile__contact-info-item">
@@ -242,7 +235,7 @@
                 </div>
                 <div class="profile__contact-info-body">
                   <h5 class="profile__contact-info-heading">Work address</h5>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  {{drdata.near}} , {{drdata.street}}
                 </div>
               </div>
             </div>
@@ -251,6 +244,4 @@
         </div>
     </div>
     
-    <script src="https://kit.fontawesome.com/dd8c49730d.js" crossorigin="anonymous"></script>
     
-    </body>

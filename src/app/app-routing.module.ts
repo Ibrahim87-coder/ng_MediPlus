@@ -6,10 +6,10 @@ import { ListComponent } from './list/list.component';
 
 
 const routes: Routes = [
-  { path: 'account', loadChildren: () => import('./account/account.module').then(m => m.AccountModule) },
+  {path: 'account', loadChildren: () => import('./account/account.module').then(m => m.AccountModule) },
   {path:'',component:HomePageComponent},
   {path:'list',component:ListComponent},
-  {path:'info',component:DrInfoComponent}
+  {path:':info',component:DrInfoComponent}
 ];
 
 @NgModule({

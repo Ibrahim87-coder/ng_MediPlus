@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore'
 import { AngularFireAuth } from '@angular/fire/auth';
 
@@ -10,6 +10,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 export class ListComponent implements OnInit {
   image:"";
   doctors = [];
+  specialData=[];  
+
   constructor(private firestore:AngularFirestore, private Auth:AngularFireAuth) { }
 
   ngOnInit(): void {
@@ -19,6 +21,7 @@ export class ListComponent implements OnInit {
         var data = <any>doc.data()
         this.image = data.image;
         this.doctors.push(doc.data());
+
       });
       console.log(this.doctors);
       
